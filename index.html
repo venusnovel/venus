@@ -12,12 +12,12 @@
     box-sizing:border-box;
     margin:0;
     padding:0;
+    font-family:Tahoma,Arial,sans-serif;
 }
 
 body{
-    background:#0d0d12;
-    color:#f5f5f5;
-    font-family:Tahoma,Arial,sans-serif;
+    background:#0b1114;
+    color:#fff;
     min-height:100vh;
 }
 
@@ -25,341 +25,364 @@ button,input,textarea{
     font-family:inherit;
 }
 
-button{
-    cursor:pointer;
-}
-
 .app{
     max-width:600px;
     margin:auto;
     min-height:100vh;
-    padding-bottom:85px;
+    padding-bottom:90px;
+}
+
+header{
+    padding:20px 18px 12px;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#35d0c1;
+}
+
+.telegram-box{
+    margin:4px 16px 18px;
+    background:#121a1e;
+    border:1px solid #214d4c;
+    border-radius:16px;
+    padding:12px 15px;
+    text-align:center;
+}
+
+.telegram-box a{
+    color:#48d7c9;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:bold;
 }
 
 .page{
     display:none;
-    padding:20px 16px;
+    padding:10px 16px;
 }
 
 .page.active{
     display:block;
 }
 
-.header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    margin-bottom:22px;
-}
-
-.logo{
-    font-size:23px;
-    font-weight:bold;
-}
-
-.logo span{
-    color:#9b7cff;
-}
-
-.icon-btn{
-    width:42px;
-    height:42px;
-    border:0;
-    border-radius:14px;
-    background:#191922;
-    color:#fff;
-    font-size:20px;
-}
-
 .hero{
-    background:linear-gradient(145deg,#201b35,#15151e);
-    border:1px solid #2c2741;
+    background:linear-gradient(135deg,#123b3b,#102326);
+    border:1px solid #214d4c;
     border-radius:25px;
-    padding:25px 20px;
-    margin-bottom:25px;
+    padding:24px 20px;
+    margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:26px;
+    font-size:25px;
     margin-bottom:10px;
 }
 
 .hero p{
-    color:#aaa7b5;
+    color:#b7c4c7;
     line-height:1.9;
     font-size:14px;
 }
 
 .section-title{
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    margin:25px 0 14px;
+    align-items:center;
+    margin:22px 2px 12px;
 }
 
 .section-title h2{
     font-size:18px;
 }
 
-.muted{
-    color:#898795;
-    font-size:13px;
-}
-
-.empty{
-    background:#15151d;
-    border:1px dashed #302f3b;
+.card{
+    background:#121a1e;
+    border:1px solid #202d31;
     border-radius:20px;
-    padding:30px 20px;
-    text-align:center;
-    color:#898795;
-    line-height:2;
-}
-
-.loading{
-    text-align:center;
-    color:#898795;
-    padding:30px;
-}
-
-.novel-list{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
+    padding:14px;
+    margin-bottom:12px;
 }
 
 .novel-card{
     display:flex;
     gap:14px;
     align-items:center;
-    background:#15151d;
-    border:1px solid #252530;
-    border-radius:20px;
-    padding:12px;
-}
-
-.novel-card:active{
-    transform:scale(.98);
+    cursor:pointer;
 }
 
 .cover{
     width:78px;
     height:105px;
     border-radius:13px;
-    object-fit:cover;
-    background:#24242e;
-    flex-shrink:0;
-}
-
-.cover-placeholder{
-    width:78px;
-    height:105px;
-    border-radius:13px;
-    background:linear-gradient(145deg,#29253a,#191921);
+    background:#1c292d;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:27px;
+    overflow:hidden;
     flex-shrink:0;
 }
 
+.cover img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.cover-placeholder{
+    color:#657477;
+    font-size:30px;
+}
+
 .novel-info{
-    min-width:0;
     flex:1;
 }
 
 .novel-info h3{
     font-size:16px;
-    margin-bottom:8px;
+    margin-bottom:9px;
 }
 
 .novel-info p{
-    color:#96939f;
+    color:#8e9da1;
     font-size:12px;
-    margin-bottom:6px;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
+    margin-top:5px;
 }
 
-.badge{
+.tag{
     display:inline-block;
-    background:#262137;
-    color:#b9a8ff;
-    border-radius:8px;
-    padding:5px 8px;
+    background:#183836;
+    color:#48d7c9;
+    border-radius:20px;
+    padding:5px 9px;
     font-size:10px;
+    margin-top:8px;
 }
 
 .search-box{
-    display:flex;
-    gap:10px;
-    margin-bottom:18px;
-}
-
-.search-box input{
-    flex:1;
-}
-
-input,textarea{
     width:100%;
-    background:#17171f;
-    color:#fff;
-    border:1px solid #2b2b36;
-    border-radius:14px;
-    padding:13px 14px;
+    background:#121a1e;
+    border:1px solid #253238;
+    color:white;
+    padding:14px 16px;
+    border-radius:15px;
     outline:none;
-    font-size:13px;
-}
-
-input:focus,
-textarea:focus{
-    border-color:#8064d9;
-}
-
-textarea{
-    min-height:120px;
-    resize:vertical;
-}
-
-.form-group{
     margin-bottom:15px;
 }
 
-.form-group label{
-    display:block;
-    color:#bcb9c5;
-    font-size:12px;
-    margin-bottom:7px;
+.search-box:focus{
+    border-color:#35d0c1;
 }
 
-.primary-btn{
-    width:100%;
-    border:0;
-    border-radius:15px;
-    padding:14px;
-    background:#8064d9;
-    color:#fff;
-    font-size:14px;
-    font-weight:bold;
+.empty{
+    text-align:center;
+    padding:40px 20px;
+    color:#718084;
 }
 
-.secondary-btn{
-    width:100%;
-    border:1px solid #302f3d;
-    border-radius:15px;
-    padding:13px;
-    background:#191922;
-    color:#fff;
+.empty-icon{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.loading{
+    text-align:center;
+    padding:30px 20px;
+    color:#8fa1a5;
+}
+
+.retry-box{
+    text-align:center;
+    padding:25px 15px;
+    background:#121a1e;
+    border:1px solid #3c3030;
+    border-radius:18px;
+    color:#aebabc;
+}
+
+.retry-box p{
+    line-height:1.8;
     font-size:13px;
+    margin-bottom:12px;
 }
 
-.danger-btn{
-    border:0;
+.retry-btn{
+    border:1px solid #35d0c1;
+    background:#183836;
+    color:#48d7c9;
+    padding:10px 18px;
     border-radius:12px;
-    padding:10px 13px;
-    background:#452027;
-    color:#ffb4bd;
-    font-size:11px;
-}
-
-.admin-card{
-    background:#15151d;
-    border:1px solid #292934;
-    border-radius:20px;
-    padding:18px;
-    margin-bottom:18px;
-}
-
-.admin-card h3{
-    font-size:16px;
-    margin-bottom:15px;
-}
-
-.cover-preview{
-    width:120px;
-    height:160px;
-    border-radius:15px;
-    object-fit:cover;
-    display:none;
-    margin:10px auto 15px;
+    cursor:pointer;
 }
 
 .detail-cover{
-    width:180px;
-    height:245px;
+    width:160px;
+    height:220px;
+    margin:10px auto 20px;
     border-radius:20px;
-    object-fit:cover;
-    display:block;
-    margin:0 auto 22px;
-}
-
-.detail-placeholder{
-    width:180px;
-    height:245px;
-    border-radius:20px;
-    background:#20202a;
+    overflow:hidden;
+    background:#182326;
     display:flex;
     align-items:center;
     justify-content:center;
-    margin:0 auto 22px;
-    font-size:45px;
+}
+
+.detail-cover img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
 .detail-title{
     text-align:center;
     font-size:24px;
-    margin-bottom:10px;
+    margin-bottom:8px;
 }
 
 .detail-author{
     text-align:center;
-    color:#9e9ba8;
+    color:#8e9da1;
     margin-bottom:20px;
-    font-size:13px;
 }
 
-.detail-summary{
-    background:#15151d;
+.summary{
+    background:#121a1e;
     border-radius:18px;
-    padding:18px;
+    padding:17px;
     line-height:2;
-    color:#c4c1cb;
-    font-size:13px;
-    margin-bottom:18px;
-}
-
-.back-btn{
-    background:none;
-    border:0;
-    color:#aaa7b5;
+    color:#c3ccce;
     font-size:14px;
-    margin-bottom:18px;
 }
 
-.login-box{
-    max-width:420px;
-    margin:70px auto;
+.primary-btn{
+    width:100%;
+    border:none;
+    background:#35c9bc;
+    color:#061010;
+    padding:14px;
+    border-radius:14px;
+    font-weight:bold;
+    margin-top:15px;
+    cursor:pointer;
 }
 
-.login-box h1{
-    text-align:center;
-    margin-bottom:10px;
+.secondary-btn{
+    width:100%;
+    border:1px solid #294044;
+    background:#121a1e;
+    color:#fff;
+    padding:13px;
+    border-radius:14px;
+    margin-top:10px;
+    cursor:pointer;
 }
 
-.login-box p{
-    text-align:center;
-    color:#8e8b97;
+.danger-btn{
+    border:none;
+    background:#54262b;
+    color:#ffb7bd;
+    padding:10px 14px;
+    border-radius:12px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.admin-box{
+    background:#121a1e;
+    border:1px solid #26373b;
+    border-radius:20px;
+    padding:18px;
+    margin-bottom:15px;
+}
+
+.admin-box h3{
+    margin-bottom:15px;
+}
+
+label{
+    display:block;
+    color:#9eabad;
     font-size:12px;
+    margin:13px 0 7px;
+}
+
+.input,
+textarea{
+    width:100%;
+    background:#0b1114;
+    color:white;
+    border:1px solid #29383c;
+    border-radius:12px;
+    padding:13px;
+    outline:none;
+}
+
+.input:focus,
+textarea:focus{
+    border-color:#35d0c1;
+}
+
+textarea{
+    min-height:110px;
+    resize:vertical;
+}
+
+.file-input{
+    padding:10px;
+}
+
+.preview{
+    width:100px;
+    height:135px;
+    border-radius:14px;
+    overflow:hidden;
+    background:#1c292d;
+    margin-top:10px;
+    display:none;
+}
+
+.preview img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.admin-login{
+    margin-top:45px;
+}
+
+.lock{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.login-title{
+    text-align:center;
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.login-sub{
+    text-align:center;
+    color:#7f8c90;
+    font-size:13px;
     margin-bottom:25px;
 }
 
 .error{
-    color:#ff8f9d;
-    font-size:12px;
-    text-align:center;
-    margin-top:12px;
     display:none;
+    background:#4a252a;
+    color:#ffb8be;
+    padding:11px;
+    border-radius:12px;
+    font-size:12px;
+    margin-top:12px;
+    text-align:center;
 }
 
 .bottom-nav{
@@ -368,48 +391,69 @@ textarea{
     left:50%;
     transform:translateX(-50%);
     width:min(600px,100%);
-    height:72px;
-    background:rgba(18,18,25,.96);
-    border-top:1px solid #292934;
+    background:#10181c;
+    border-top:1px solid #223034;
     display:flex;
     justify-content:space-around;
-    align-items:center;
+    padding:10px 5px;
     z-index:100;
-    backdrop-filter:blur(12px);
 }
 
 .nav-btn{
     background:none;
-    border:0;
-    color:#777580;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:5px;
-    font-size:10px;
+    border:none;
+    color:#718084;
+    font-size:11px;
+    cursor:pointer;
+    padding:5px 10px;
 }
 
-.nav-icon{
-    font-size:21px;
+.nav-btn .icon{
+    display:block;
+    font-size:20px;
+    margin-bottom:4px;
 }
 
 .nav-btn.active{
-    color:#a88cff;
+    color:#35d0c1;
+}
+
+.back-btn{
+    background:none;
+    border:none;
+    color:#35d0c1;
+    font-size:14px;
+    cursor:pointer;
+    margin-bottom:15px;
+}
+
+.management-link{
+    text-align:center;
+    color:#59696d;
+    font-size:11px;
+    margin-top:30px;
+    cursor:pointer;
 }
 
 .toast{
     position:fixed;
-    bottom:90px;
+    bottom:80px;
     left:50%;
     transform:translateX(-50%);
-    background:#25232d;
-    color:#fff;
+    background:#18282b;
+    border:1px solid #35d0c1;
+    color:#d9fffb;
     padding:12px 18px;
     border-radius:13px;
     font-size:12px;
     display:none;
     z-index:200;
-    box-shadow:0 8px 30px #0008;
+    max-width:90%;
+    text-align:center;
+}
+
+.hidden{
+    display:none !important;
 }
 </style>
 </head>
@@ -418,122 +462,99 @@ textarea{
 
 <div class="app">
 
-<section id="homePage" class="page active">
+<header>
+    <div class="logo">انجمن <span>ونوس</span></div>
+</header>
 
-    <div class="header">
-        <div class="logo">
-            انجمن <span>ونوس</span>
-        </div>
+<div class="telegram-box">
+    📢
+    <a href="https://t.me/VenusWrite" target="_blank">
+        کانال انجمن ونوس — @VenusWrite
+    </a>
+</div>
 
-        <button class="icon-btn" onclick="showSearch()">⌕</button>
-    </div>
+<!-- HOME -->
+<section id="home" class="page active">
 
     <div class="hero">
-        <h1>به انجمن ونوس خوش اومدی ✨</h1>
-
+        <h1>به انجمن ونوس خوش اومدی 🌙</h1>
         <p>
-            جایی برای پیدا کردن رمان‌ها، نویسنده‌ها
-            و داستان‌هایی که ارزش خوندن دارن.
+            جایی برای پیدا کردن رمان‌ها، نویسنده‌ها و داستان‌هایی که دوستشون داری.
         </p>
     </div>
 
     <div class="section-title">
         <h2>آخرین رمان‌ها</h2>
-
-        <span class="muted"
-              onclick="showNovels()"
-              style="cursor:pointer">
-            همه
-        </span>
     </div>
 
-    <div id="homeNovelList" class="novel-list">
-        <div class="loading">
-            در حال دریافت رمان‌ها...
-        </div>
+    <div id="homeNovels">
+        <div class="loading">در حال دریافت رمان‌ها...</div>
     </div>
 
-    <div style="margin-top:25px">
-        <button class="secondary-btn"
-                onclick="showLogin()">
-            ⚙️ ورود به مدیریت
-        </button>
+    <div class="management-link" onclick="showLogin()">
+        ⚙️ ورود به مدیریت
     </div>
 
 </section>
 
+<!-- NOVELS -->
+<section id="novels" class="page">
 
-<section id="novelsPage" class="page">
-
-    <div class="header">
-        <div class="logo">رمان‌ها</div>
+    <div class="section-title">
+        <h2>رمان‌ها</h2>
     </div>
 
-    <div class="search-box">
-        <input
-            id="novelSearch"
-            type="text"
-            placeholder="جستجوی رمان..."
-            oninput="renderNovels()"
-        >
-    </div>
+    <input
+        class="search-box"
+        id="novelSearch"
+        placeholder="جستجوی رمان یا نویسنده..."
+        oninput="showNovels()"
+    >
 
-    <div id="novelList" class="novel-list">
-        <div class="loading">
-            در حال دریافت رمان‌ها...
-        </div>
+    <div id="novelList">
+        <div class="loading">در حال دریافت رمان‌ها...</div>
     </div>
 
 </section>
 
+<!-- AUTHORS -->
+<section id="authors" class="page">
 
-<section id="authorsPage" class="page">
-
-    <div class="header">
-        <div class="logo">نویسندگان</div>
+    <div class="section-title">
+        <h2>نویسنده‌ها</h2>
     </div>
 
-    <div id="authorList" class="novel-list">
+    <div id="authorList"></div>
 
+</section>
+
+<!-- SEARCH -->
+<section id="search" class="page">
+
+    <div class="section-title">
+        <h2>جستجو</h2>
+    </div>
+
+    <input
+        class="search-box"
+        id="globalSearchInput"
+        placeholder="چی می‌خوای پیدا کنی؟"
+        oninput="globalSearch()"
+    >
+
+    <div id="globalResults">
         <div class="empty">
-            هنوز نویسنده‌ای اضافه نشده.
+            <div class="empty-icon">🔎</div>
+            <p>نام رمان یا نویسنده را جستجو کن.</p>
         </div>
-
     </div>
 
 </section>
 
+<!-- DETAIL -->
+<section id="detail" class="page">
 
-<section id="searchPage" class="page">
-
-    <div class="header">
-        <div class="logo">جستجو</div>
-    </div>
-
-    <div class="search-box">
-        <input
-            id="globalSearch"
-            type="text"
-            placeholder="نام رمان یا نویسنده..."
-            oninput="globalSearch()"
-        >
-    </div>
-
-    <div id="searchResults" class="novel-list">
-
-        <div class="empty">
-            برای شروع، نام رمان یا نویسنده را جستجو کن.
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="detailPage" class="page">
-
-    <button class="back-btn"
-            onclick="showNovels()">
+    <button class="back-btn" onclick="showPage('novels')">
         ← برگشت
     </button>
 
@@ -541,202 +562,137 @@ textarea{
 
 </section>
 
+<!-- LOGIN -->
+<section id="login" class="page">
 
-<section id="loginPage" class="page">
+    <div class="admin-login">
 
-    <div class="login-box">
+        <div class="lock">🔐</div>
 
-        <h1>ورود به مدیریت</h1>
+        <div class="login-title">
+            ورود به مدیریت
+        </div>
 
-        <p>
-            این بخش مخصوص مدیریت انجمن ونوس است.
-        </p>
+        <div class="login-sub">
+            برای ورود رمز مدیریت را وارد کنید.
+        </div>
 
-        <div class="form-group">
+        <div class="admin-box">
 
             <label>رمز مدیریت</label>
 
             <input
+                class="input"
                 id="adminPassword"
                 type="password"
                 placeholder="رمز را وارد کنید"
-                onkeydown="if(event.key==='Enter') loginAdmin()"
+                onkeydown="if(event.key==='Enter') checkPassword()"
             >
 
-        </div>
+            <button class="primary-btn" onclick="checkPassword()">
+                ورود به مدیریت
+            </button>
 
-        <button class="primary-btn"
-                onclick="loginAdmin()">
-            ورود
-        </button>
-
-        <div id="loginError" class="error">
-            رمز وارد شده صحیح نیست.
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="adminPage" class="page">
-
-    <div class="header">
-
-        <div class="logo">
-            مدیریت
-        </div>
-
-        <button class="icon-btn"
-                onclick="adminLogout()">
-            ×
-        </button>
-
-    </div>
-
-    <div class="admin-card">
-
-        <h3>افزودن رمان جدید</h3>
-
-        <div class="form-group">
-            <label>نام رمان</label>
-
-            <input
-                id="titleInput"
-                type="text"
-                placeholder="نام رمان"
-            >
-        </div>
-
-        <div class="form-group">
-            <label>نام نویسنده</label>
-
-            <input
-                id="authorInput"
-                type="text"
-                placeholder="نام نویسنده"
-            >
-        </div>
-
-        <div class="form-group">
-            <label>ژانر</label>
-
-            <input
-                id="genreInput"
-                type="text"
-                placeholder="مثلاً عاشقانه، معمایی"
-            >
-        </div>
-
-        <div class="form-group">
-            <label>لینک مطالعه</label>
-
-            <input
-                id="linkInput"
-                type="url"
-                placeholder="https://..."
-            >
-        </div>
-
-        <div class="form-group">
-            <label>خلاصه رمان</label>
-
-            <textarea
-                id="summaryInput"
-                placeholder="خلاصه رمان..."
-            ></textarea>
-        </div>
-
-        <div class="form-group">
-            <label>جلد رمان</label>
-
-            <input
-                id="coverInput"
-                type="file"
-                accept="image/*"
-                onchange="previewCover(event)"
-            >
-        </div>
-
-        <img
-            id="coverPreview"
-            class="cover-preview"
-        >
-
-        <button
-            id="addButton"
-            class="primary-btn"
-            onclick="addNovel()"
-        >
-            + افزودن رمان
-        </button>
-
-    </div>
-
-    <div class="admin-card">
-
-        <h3>رمان‌های موجود</h3>
-
-        <div id="adminNovelList">
-            <div class="loading">
-                در حال دریافت...
+            <div class="error" id="loginError">
+                رمز واردشده اشتباه است.
             </div>
+
         </div>
 
     </div>
 
 </section>
 
-</div>
+<!-- ADMIN -->
+<section id="admin" class="page">
 
+    <button class="back-btn" onclick="logoutAdmin()">
+        ← خروج از مدیریت
+    </button>
 
+    <div class="section-title">
+        <h2>پنل مدیریت ⚙️</h2>
+    </div>
+
+    <div class="admin-box">
+
+        <h3>➕ افزودن رمان</h3>
+
+        <label>نام رمان</label>
+        <input class="input" id="title" placeholder="نام رمان">
+
+        <label>نام نویسنده</label>
+        <input class="input" id="author" placeholder="نام نویسنده">
+
+        <label>ژانر</label>
+        <input class="input" id="genre" placeholder="مثلاً عاشقانه، معمایی">
+
+        <label>لینک مطالعه</label>
+        <input class="input" id="link" placeholder="https://...">
+
+        <label>خلاصه</label>
+        <textarea id="summary" placeholder="خلاصه رمان..."></textarea>
+
+        <label>جلد رمان</label>
+
+        <input
+            class="input file-input"
+            type="file"
+            id="cover"
+            accept="image/*"
+            onchange="previewCover(event)"
+        >
+
+        <div class="preview" id="coverPreview">
+            <img id="previewImage" alt="">
+        </div>
+
+        <button class="primary-btn" onclick="addNovel()">
+            افزودن رمان
+        </button>
+
+    </div>
+
+    <div class="admin-box">
+
+        <h3>📚 رمان‌های ثبت‌شده</h3>
+
+        <div id="adminNovelList"></div>
+
+    </div>
+
+</section>
+
+<!-- BOTTOM NAV -->
 <nav class="bottom-nav">
 
-    <button
-        id="navHome"
-        class="nav-btn active"
-        onclick="showHome()"
-    >
-        <span class="nav-icon">⌂</span>
+    <button class="nav-btn active" onclick="showPage('home')">
+        <span class="icon">⌂</span>
         خانه
     </button>
 
-    <button
-        id="navNovels"
-        class="nav-btn"
-        onclick="showNovels()"
-    >
-        <span class="nav-icon">▤</span>
+    <button class="nav-btn" onclick="showPage('novels')">
+        <span class="icon">📚</span>
         رمان‌ها
     </button>
 
-    <button
-        id="navAuthors"
-        class="nav-btn"
-        onclick="showAuthors()"
-    >
-        <span class="nav-icon">♙</span>
-        نویسندگان
+    <button class="nav-btn" onclick="showPage('authors')">
+        <span class="icon">✍️</span>
+        نویسنده‌ها
     </button>
 
-    <button
-        id="navSearch"
-        class="nav-btn"
-        onclick="showSearch()"
-    >
-        <span class="nav-icon">⌕</span>
+    <button class="nav-btn" onclick="showPage('search')">
+        <span class="icon">⌕</span>
         جستجو
     </button>
 
 </nav>
 
-<div id="toast" class="toast"></div><script>
+</div>
 
-/* =========================
-   SUPABASE
-========================= */
+<div class="toast" id="toast"></div>
 
-const SUPABASE_URL =
+<script>const SUPABASE_URL =
 "https://loaeqpunknjqxblltlkj.supabase.co";
 
 const SUPABASE_PUBLISHABLE_KEY =
@@ -748,309 +704,246 @@ window.supabase.createClient(
     SUPABASE_PUBLISHABLE_KEY
 );
 
-
-/* =========================
-   تنظیمات
-========================= */
-
-const ADMIN_PASSWORD =
-"kiyasha7580";
+const ADMIN_PASSWORD = "kiyasha7580";
 
 let novels = [];
-
 let selectedCover = "";
+let loadingError = false;
 
 
 /* =========================
-   صفحات
+   PAGE NAVIGATION
 ========================= */
 
-function hideAllPages(){
+function showPage(pageId){
 
-    document
-    .querySelectorAll(".page")
-    .forEach(page=>{
+    document.querySelectorAll(".page").forEach(page=>{
         page.classList.remove("active");
     });
 
-}
+    const page = document.getElementById(pageId);
 
-
-function updateNav(active){
-
-    document
-    .querySelectorAll(".nav-btn")
-    .forEach(button=>{
-        button.classList.remove("active");
-    });
-
-    if(active){
-
-        const button =
-        document.getElementById(active);
-
-        if(button){
-            button.classList.add("active");
-        }
-
+    if(page){
+        page.classList.add("active");
     }
 
+    document.querySelectorAll(".nav-btn").forEach(btn=>{
+        btn.classList.remove("active");
+    });
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+    if(pageId === "home"){
+        showHome();
+    }
+
+    if(pageId === "novels"){
+        showNovels();
+    }
+
+    if(pageId === "authors"){
+        showAuthors();
+    }
+
+    if(pageId === "search"){
+        globalSearch();
+    }
+
+    if(pageId === "admin"){
+        showAdmin();
+    }
 }
 
+
+/* =========================
+   HOME
+========================= */
 
 function showHome(){
 
-    hideAllPages();
+    const box =
+        document.getElementById("homeNovels");
 
-    document
-    .getElementById("homePage")
-    .classList.add("active");
-
-    updateNav("navHome");
-
-    renderHomeNovels();
-
-}
-
-
-function showNovels(){
-
-    hideAllPages();
-
-    document
-    .getElementById("novelsPage")
-    .classList.add("active");
-
-    updateNav("navNovels");
-
-    renderNovels();
-
-}
-
-
-function showAuthors(){
-
-    hideAllPages();
-
-    document
-    .getElementById("authorsPage")
-    .classList.add("active");
-
-    updateNav("navAuthors");
-
-    renderAuthors();
-
-}
-
-
-function showSearch(){
-
-    hideAllPages();
-
-    document
-    .getElementById("searchPage")
-    .classList.add("active");
-
-    updateNav("navSearch");
-
-    document
-    .getElementById("globalSearch")
-    .value = "";
-
-    document
-    .getElementById("searchResults")
-    .innerHTML = `
-        <div class="empty">
-            برای شروع، نام رمان یا نویسنده را جستجو کن.
-        </div>
-    `;
-
-}
-
-
-function showLogin(){
-
-    hideAllPages();
-
-    document
-    .getElementById("loginPage")
-    .classList.add("active");
-
-    document
-    .getElementById("adminPassword")
-    .value = "";
-
-    document
-    .getElementById("loginError")
-    .style.display = "none";
-
-}
-
-
-function showAdmin(){
-
-    hideAllPages();
-
-    document
-    .getElementById("adminPage")
-    .classList.add("active");
-
-    renderAdminNovels();
-
-}
-
-
-/* =========================
-   دریافت رمان‌ها
-========================= */
-
-async function loadNovelsFromSupabase(){
-
-    const home =
-    document.getElementById("homeNovelList");
-
-    const list =
-    document.getElementById("novelList");
-
-    if(home){
-        home.innerHTML =
-        `<div class="loading">
-            در حال دریافت رمان‌ها...
-        </div>`;
+    if(loadingError){
+        showLoadingError(box);
+        return;
     }
 
-    if(list){
-        list.innerHTML =
-        `<div class="loading">
-            در حال دریافت رمان‌ها...
-        </div>`;
-    }
+    if(novels.length === 0){
 
-    try{
-
-        const result =
-        await supabaseClient
-        .from("novels")
-        .select("*")
-        .order("created_at", {
-            ascending:false
-        });
-
-        const data = result.data;
-        const error = result.error;
-
-        if(error){
-
-            console.error(
-                "Supabase Error:",
-                error
-            );
-
-            novels = [];
-
-            if(home){
-                home.innerHTML =
-                `<div class="empty">
-                    خطا در دریافت رمان‌ها.
-                </div>`;
-            }
-
-            if(list){
-                list.innerHTML =
-                `<div class="empty">
-                    خطا در دریافت رمان‌ها.
-                </div>`;
-            }
-
-            return;
-        }
-
-        novels =
-        (data || []).map(item=>({
-
-            id:item.id,
-
-            title:item.title || "",
-
-            author:item.author || "",
-
-            genre:item.genre || "",
-
-            summary:item.summary || "",
-
-            link:item.study_link || "",
-
-            cover:item.cover_url || ""
-
-        }));
-
-        renderHomeNovels();
-
-        renderNovels();
-
-        renderAuthors();
-
-        renderAdminNovels();
-
-    }catch(error){
-
-        console.error(error);
-
-        if(home){
-            home.innerHTML =
-            `<div class="empty">
-                اتصال به سرور برقرار نشد.
-            </div>`;
-        }
-
-        if(list){
-            list.innerHTML =
-            `<div class="empty">
-                اتصال به سرور برقرار نشد.
-            </div>`;
-        }
-
-    }
-
-}
-
-
-/* =========================
-   کارت رمان
-========================= */
-
-function novelCard(novel){
-
-    let coverHTML = "";
-
-    if(novel.cover){
-
-        coverHTML = `
-            <img
-                class="cover"
-                src="${novel.cover}"
-                alt="جلد رمان"
-            >
-        `;
-
-    }else{
-
-        coverHTML = `
-            <div class="cover-placeholder">
-                📖
+        box.innerHTML = `
+            <div class="empty">
+                <div class="empty-icon">📚</div>
+                <p>هنوز رمانی اضافه نشده.</p>
             </div>
         `;
 
+        return;
     }
 
-    return `
+    box.innerHTML =
+        novels
+        .slice(0,5)
+        .map(createNovelCard)
+        .join("");
+}
 
+
+/* =========================
+   NOVELS
+========================= */
+
+function showNovels(){
+
+    const box =
+        document.getElementById("novelList");
+
+    if(loadingError){
+        showLoadingError(box);
+        return;
+    }
+
+    const input =
+        document.getElementById("novelSearch");
+
+    const search =
+        input
+        ? input.value.trim().toLowerCase()
+        : "";
+
+    let results = novels;
+
+    if(search){
+
+        results = novels.filter(novel =>
+
+            String(novel.title || "")
+            .toLowerCase()
+            .includes(search)
+
+            ||
+
+            String(novel.author || "")
+            .toLowerCase()
+            .includes(search)
+
+            ||
+
+            String(novel.genre || "")
+            .toLowerCase()
+            .includes(search)
+        );
+    }
+
+    if(results.length === 0){
+
+        box.innerHTML = `
+            <div class="empty">
+                <div class="empty-icon">📚</div>
+                <p>
+                    ${search
+                        ? "رمانی با این مشخصات پیدا نشد."
+                        : "هنوز رمانی اضافه نشده."
+                    }
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+    box.innerHTML =
+        results.map(createNovelCard).join("");
+}
+
+
+/* =========================
+   AUTHORS
+========================= */
+
+function showAuthors(){
+
+    const box =
+        document.getElementById("authorList");
+
+    if(loadingError){
+        showLoadingError(box);
+        return;
+    }
+
+    const authors = [
+        ...new Set(
+            novels
+            .map(novel => novel.author)
+            .filter(Boolean)
+        )
+    ];
+
+    if(authors.length === 0){
+
+        box.innerHTML = `
+            <div class="empty">
+                <div class="empty-icon">✍️</div>
+                <p>هنوز نویسنده‌ای ثبت نشده.</p>
+            </div>
+        `;
+
+        return;
+    }
+
+    box.innerHTML =
+        authors.map(author => {
+
+            const count =
+                novels.filter(
+                    novel => novel.author === author
+                ).length;
+
+            return `
+                <div class="card">
+                    <h3>${escapeHTML(author)}</h3>
+                    <p style="color:#8e9da1;margin-top:8px;font-size:12px">
+                        ${count} رمان
+                    </p>
+                </div>
+            `;
+
+        }).join("");
+}
+
+
+/* =========================
+   NOVEL CARD
+========================= */
+
+function createNovelCard(novel){
+
+    const id =
+        encodeURIComponent(String(novel.id));
+
+    const cover =
+        novel.cover
+        ? `
+            <img
+                src="${escapeHTML(novel.cover)}"
+                alt="${escapeHTML(novel.title)}"
+                onerror="this.style.display='none';this.parentElement.innerHTML='<span class=&quot;cover-placeholder&quot;>📖</span>'"
+            >
+          `
+        : `<span class="cover-placeholder">📖</span>`;
+
+    return `
         <div
-            class="novel-card"
-            onclick="openDetail(${novel.id})"
+            class="card novel-card"
+            onclick="openNovel('${id}')"
         >
 
-            ${coverHTML}
+            <div class="cover">
+                ${cover}
+            </div>
 
             <div class="novel-info">
 
@@ -1060,48 +953,337 @@ function novelCard(novel){
 
                 <p>
                     نویسنده:
-                    ${escapeHTML(novel.author)}
+                    ${escapeHTML(novel.author || "نامشخص")}
                 </p>
 
                 ${
                     novel.genre
-                    ?
-                    `
-                    <span class="badge">
-                        ${escapeHTML(novel.genre)}
-                    </span>
-                    `
-                    :
-                    ""
+                    ? `
+                        <span class="tag">
+                            ${escapeHTML(novel.genre)}
+                        </span>
+                      `
+                    : ""
                 }
 
             </div>
 
         </div>
+    `;
+}
 
+
+/* =========================
+   OPEN NOVEL
+========================= */
+
+function openNovel(encodedId){
+
+    const id =
+        decodeURIComponent(encodedId);
+
+    const novel =
+        novels.find(
+            item => String(item.id) === String(id)
+        );
+
+    if(!novel){
+        showToast("رمان پیدا نشد.");
+        return;
+    }
+
+    const box =
+        document.getElementById("detailContent");
+
+    const cover =
+        novel.cover
+        ? `
+            <img
+                src="${escapeHTML(novel.cover)}"
+                alt="${escapeHTML(novel.title)}"
+            >
+          `
+        : `<span class="cover-placeholder">📖</span>`;
+
+    box.innerHTML = `
+
+        <div class="detail-cover">
+            ${cover}
+        </div>
+
+        <h1 class="detail-title">
+            ${escapeHTML(novel.title)}
+        </h1>
+
+        <div class="detail-author">
+            نویسنده:
+            ${escapeHTML(novel.author || "نامشخص")}
+        </div>
+
+        ${
+            novel.genre
+            ? `
+                <div style="text-align:center;margin-bottom:18px">
+                    <span class="tag">
+                        ${escapeHTML(novel.genre)}
+                    </span>
+                </div>
+              `
+            : ""
+        }
+
+        <div class="summary">
+            ${
+                escapeHTML(
+                    novel.summary || "خلاصه‌ای ثبت نشده."
+                )
+            }
+        </div>
+
+        ${
+            novel.link
+            ? `
+                <button
+                    class="primary-btn"
+                    onclick="openLink('${encodeURIComponent(novel.link)}')"
+                >
+                    📖 مطالعه رمان
+                </button>
+              `
+            : ""
+        }
     `;
 
+    showPage("detail");
 }
 
 
 /* =========================
-   خانه
+   SUPABASE LOAD
 ========================= */
 
-function renderHomeNovels(){
+async function loadNovelsFromSupabase(){
 
-    const box =
-    document.getElementById(
-        "homeNovelList"
-    );
+    loadingError = false;
+
+    const homeBox =
+        document.getElementById("homeNovels");
+
+    const novelBox =
+        document.getElementById("novelList");
+
+    if(homeBox){
+        homeBox.innerHTML =
+            `<div class="loading">در حال دریافت رمان‌ها...</div>`;
+    }
+
+    if(novelBox){
+        novelBox.innerHTML =
+            `<div class="loading">در حال دریافت رمان‌ها...</div>`;
+    }
+
+    try{
+
+        const { data, error } =
+            await supabaseClient
+            .from("novels")
+            .select("*")
+            .order("created_at", {
+                ascending:false
+            });
+
+        if(error){
+            throw error;
+        }
+
+        novels =
+            (data || []).map(novel => ({
+
+                id: novel.id,
+
+                title:
+                    novel.title || "",
+
+                author:
+                    novel.author || "",
+
+                genre:
+                    novel.genre || "",
+
+                summary:
+                    novel.summary || "",
+
+                link:
+                    novel.study_link || "",
+
+                cover:
+                    novel.cover_url || ""
+
+            }));
+
+        loadingError = false;
+
+        showHome();
+        showNovels();
+        showAuthors();
+
+    }catch(error){
+
+        console.error(
+            "Supabase load error:",
+            error
+        );
+
+        loadingError = true;
+
+        if(homeBox){
+            showLoadingError(homeBox);
+        }
+
+        if(novelBox){
+            showLoadingError(novelBox);
+        }
+    }
+}
+
+
+/* =========================
+   LOAD ERROR
+========================= */
+
+function showLoadingError(box){
 
     if(!box) return;
 
-    if(!novels.length){
+    box.innerHTML = `
+
+        <div class="retry-box">
+
+            <p>
+                دریافت رمان‌ها انجام نشد.<br>
+                احتمالاً اتصال اینترنت یا ارتباط با سرور
+                لحظه‌ای مشکل داشته است.
+            </p>
+
+            <button
+                class="retry-btn"
+                onclick="retryLoad()"
+            >
+                تلاش دوباره
+            </button>
+
+        </div>
+    `;
+}
+
+
+async function retryLoad(){
+
+    loadingError = false;
+
+    const homeBox =
+        document.getElementById("homeNovels");
+
+    const novelBox =
+        document.getElementById("novelList");
+
+    if(homeBox){
+        homeBox.innerHTML =
+            `<div class="loading">در حال تلاش دوباره...</div>`;
+    }
+
+    if(novelBox){
+        novelBox.innerHTML =
+            `<div class="loading">در حال تلاش دوباره...</div>`;
+    }
+
+    await loadNovelsFromSupabase();
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+function showLogin(){
+
+    showPage("login");
+
+    const password =
+        document.getElementById("adminPassword");
+
+    const error =
+        document.getElementById("loginError");
+
+    if(password){
+        password.value = "";
+        password.focus();
+    }
+
+    if(error){
+        error.style.display = "none";
+    }
+}
+
+
+function checkPassword(){
+
+    const password =
+        document.getElementById("adminPassword").value;
+
+    const error =
+        document.getElementById("loginError");
+
+    if(password === ADMIN_PASSWORD){
+
+        sessionStorage.setItem(
+            "venusAdmin",
+            "true"
+        );
+
+        showPage("admin");
+
+    }else{
+
+        error.style.display = "block";
+    }
+}
+
+
+function logoutAdmin(){
+
+    sessionStorage.removeItem(
+        "venusAdmin"
+    );
+
+    showPage("home");
+}
+
+
+/* =========================
+   ADMIN
+========================= */
+
+function showAdmin(){
+
+    if(
+        sessionStorage.getItem("venusAdmin")
+        !== "true"
+    ){
+        showLogin();
+        return;
+    }
+
+    const box =
+        document.getElementById("adminNovelList");
+
+    if(!box) return;
+
+    if(novels.length === 0){
 
         box.innerHTML = `
             <div class="empty">
-                هنوز رمانی به انجمن اضافه نشده.
+                هنوز رمانی ثبت نشده.
             </div>
         `;
 
@@ -1109,221 +1291,322 @@ function renderHomeNovels(){
     }
 
     box.innerHTML =
-    novels
-    .slice(0,5)
-    .map(novel=>novelCard(novel))
-    .join("");
+        novels.map(novel => `
 
+            <div class="card">
+
+                <strong>
+                    ${escapeHTML(novel.title)}
+                </strong>
+
+                <p style="color:#8e9da1;font-size:12px;margin-top:7px">
+                    ${escapeHTML(novel.author || "")}
+                </p>
+
+                <button
+                    class="danger-btn"
+                    onclick="deleteNovel('${encodeURIComponent(String(novel.id))}')"
+                >
+                    حذف رمان
+                </button>
+
+            </div>
+
+        `).join("");
 }
 
 
 /* =========================
-   صفحه رمان‌ها
+   COVER PREVIEW
 ========================= */
 
-function renderNovels(){
+function previewCover(event){
 
-    const box =
-    document.getElementById(
-        "novelList"
-    );
+    const file =
+        event.target.files[0];
 
-    if(!box) return;
+    const preview =
+        document.getElementById("coverPreview");
 
-    const input =
-    document.getElementById(
-        "novelSearch"
-    );
+    const image =
+        document.getElementById("previewImage");
 
-    const query =
-    input
-    ?
-    input.value.trim().toLowerCase()
-    :
-    "";
+    if(!file){
+        selectedCover = "";
+        preview.style.display = "none";
+        return;
+    }
 
-    let result = novels;
+    const reader =
+        new FileReader();
 
-    if(query){
+    reader.onload = function(e){
 
-        result =
-        novels.filter(novel=>{
+        selectedCover =
+            e.target.result;
 
-            return (
+        image.src =
+            selectedCover;
 
-                novel.title
-                .toLowerCase()
-                .includes(query)
+        preview.style.display =
+            "block";
+    };
 
-                ||
+    reader.readAsDataURL(file);
+}
 
-                novel.author
-                .toLowerCase()
-                .includes(query)
 
-                ||
+/* =========================
+   ADD NOVEL
+========================= */
 
-                novel.genre
-                .toLowerCase()
-                .includes(query)
+async function addNovel(){
 
+    if(
+        sessionStorage.getItem("venusAdmin")
+        !== "true"
+    ){
+        showLogin();
+        return;
+    }
+
+    const title =
+        document.getElementById("title")
+        .value.trim();
+
+    const author =
+        document.getElementById("author")
+        .value.trim();
+
+    const genre =
+        document.getElementById("genre")
+        .value.trim();
+
+    const link =
+        document.getElementById("link")
+        .value.trim();
+
+    const summary =
+        document.getElementById("summary")
+        .value.trim();
+
+    if(!title){
+
+        showToast(
+            "لطفاً نام رمان را وارد کن."
+        );
+
+        return;
+    }
+
+    try{
+
+        const { data, error } =
+            await supabaseClient
+            .from("novels")
+            .insert({
+
+                title:title,
+
+                author:author,
+
+                genre:genre || null,
+
+                summary:summary || null,
+
+                study_link:link,
+
+                cover_url:selectedCover || null
+
+            })
+            .select()
+            .single();
+
+        if(error){
+            throw error;
+        }
+
+        if(data){
+
+            novels.unshift({
+
+                id:data.id,
+
+                title:data.title || "",
+
+                author:data.author || "",
+
+                genre:data.genre || "",
+
+                summary:data.summary || "",
+
+                link:data.study_link || "",
+
+                cover:data.cover_url || ""
+
+            });
+        }
+
+        document.getElementById("title").value = "";
+        document.getElementById("author").value = "";
+        document.getElementById("genre").value = "";
+        document.getElementById("link").value = "";
+        document.getElementById("summary").value = "";
+        document.getElementById("cover").value = "";
+
+        selectedCover = "";
+
+        document.getElementById(
+            "coverPreview"
+        ).style.display = "none";
+
+        showAdmin();
+        showHome();
+        showNovels();
+        showAuthors();
+
+        showToast(
+            "رمان با موفقیت اضافه شد ✅"
+        );
+
+    }catch(error){
+
+        console.error(
+            "Supabase insert error:",
+            error
+        );
+
+        showToast(
+            "خطا در افزودن رمان: " +
+            (error.message || "خطای نامشخص")
+        );
+    }
+}
+
+
+/* =========================
+   DELETE NOVEL
+========================= */
+
+async function deleteNovel(encodedId){
+
+    if(
+        sessionStorage.getItem("venusAdmin")
+        !== "true"
+    ){
+        showLogin();
+        return;
+    }
+
+    const id =
+        decodeURIComponent(encodedId);
+
+    if(
+        !confirm("این رمان حذف شود؟")
+    ){
+        return;
+    }
+
+    try{
+
+        const { error } =
+            await supabaseClient
+            .from("novels")
+            .delete()
+            .eq("id", id);
+
+        if(error){
+            throw error;
+        }
+
+        novels =
+            novels.filter(
+                novel =>
+                String(novel.id) !== String(id)
             );
 
-        });
+        showAdmin();
+        showHome();
+        showNovels();
+        showAuthors();
 
+        showToast(
+            "رمان حذف شد ✅"
+        );
+
+    }catch(error){
+
+        console.error(
+            "Supabase delete error:",
+            error
+        );
+
+        showToast(
+            "خطا در حذف رمان: " +
+            (error.message || "خطای نامشخص")
+        );
     }
-
-    if(!result.length){
-
-        box.innerHTML = `
-            <div class="empty">
-                ${
-                    query
-                    ?
-                    "رمانی با این مشخصات پیدا نشد."
-                    :
-                    "هنوز رمانی اضافه نشده."
-                }
-            </div>
-        `;
-
-        return;
-    }
-
-    box.innerHTML =
-    result
-    .map(novel=>novelCard(novel))
-    .join("");
-
 }
 
 
 /* =========================
-   نویسندگان
-========================= */
-
-function renderAuthors(){
-
-    const box =
-    document.getElementById(
-        "authorList"
-    );
-
-    if(!box) return;
-
-    const authors = [
-        ...new Set(
-            novels
-            .map(novel=>novel.author)
-            .filter(author=>author.trim())
-        )
-    ];
-
-    if(!authors.length){
-
-        box.innerHTML = `
-            <div class="empty">
-                هنوز نویسنده‌ای اضافه نشده.
-            </div>
-        `;
-
-        return;
-    }
-
-    box.innerHTML =
-    authors.map(author=>{
-
-        const count =
-        novels.filter(
-            novel =>
-            novel.author === author
-        ).length;
-
-        return `
-
-            <div class="novel-card">
-
-                <div class="cover-placeholder">
-                    ✍️
-                </div>
-
-                <div class="novel-info">
-
-                    <h3>
-                        ${escapeHTML(author)}
-                    </h3>
-
-                    <p>
-                        ${count} رمان
-                    </p>
-
-                </div>
-
-            </div>
-
-        `;
-
-    }).join("");
-
-}
-
-
-/* =========================
-   جستجوی کلی
+   GLOBAL SEARCH
 ========================= */
 
 function globalSearch(){
 
     const input =
-    document.getElementById(
-        "globalSearch"
-    );
+        document.getElementById(
+            "globalSearchInput"
+        );
 
     const box =
-    document.getElementById(
-        "searchResults"
-    );
+        document.getElementById(
+            "globalResults"
+        );
 
-    const query =
-    input.value.trim().toLowerCase();
+    if(!input || !box) return;
 
-    if(!query){
+    const search =
+        input.value
+        .trim()
+        .toLowerCase();
+
+    if(!search){
 
         box.innerHTML = `
             <div class="empty">
-                برای شروع، نام رمان یا نویسنده را جستجو کن.
+                <div class="empty-icon">🔎</div>
+                <p>
+                    نام رمان یا نویسنده را جستجو کن.
+                </p>
             </div>
         `;
 
         return;
     }
 
-    const result =
-    novels.filter(novel=>{
+    const results =
+        novels.filter(novel =>
 
-        return (
-
-            novel.title
+            String(novel.title || "")
             .toLowerCase()
-            .includes(query)
+            .includes(search)
 
             ||
 
-            novel.author
+            String(novel.author || "")
             .toLowerCase()
-            .includes(query)
+            .includes(search)
 
             ||
 
-            novel.genre
+            String(novel.genre || "")
             .toLowerCase()
-            .includes(query)
-
+            .includes(search)
         );
 
-    });
-
-    if(!result.length){
+    if(results.length === 0){
 
         box.innerHTML = `
             <div class="empty">
@@ -1335,700 +1618,86 @@ function globalSearch(){
     }
 
     box.innerHTML =
-    result
-    .map(novel=>novelCard(novel))
-    .join("");
-
+        results.map(createNovelCard).join("");
 }
 
 
 /* =========================
-   جزئیات
+   OPEN LINK
 ========================= */
 
-function openDetail(id){
-
-    const novel =
-    novels.find(
-        item =>
-        String(item.id) === String(id)
-    );
-
-    if(!novel) return;
-
-    hideAllPages();
-
-    document
-    .getElementById("detailPage")
-    .classList.add("active");
-
-    updateNav("");
-
-    let coverHTML = "";
-
-    if(novel.cover){
-
-        coverHTML = `
-            <img
-                class="detail-cover"
-                src="${novel.cover}"
-                alt="جلد رمان"
-            >
-        `;
-
-    }else{
-
-        coverHTML = `
-            <div class="detail-placeholder">
-                📖
-            </div>
-        `;
-
-    }
-
-    document
-    .getElementById("detailContent")
-    .innerHTML = `
-
-        ${coverHTML}
-
-        <h1 class="detail-title">
-            ${escapeHTML(novel.title)}
-        </h1>
-
-        <div class="detail-author">
-            نویسنده:
-            ${escapeHTML(novel.author)}
-        </div>
-
-        ${
-            novel.genre
-            ?
-            `
-            <div style="
-                text-align:center;
-                margin-bottom:20px;
-            ">
-                <span class="badge">
-                    ${escapeHTML(novel.genre)}
-                </span>
-            </div>
-            `
-            :
-            ""
-        }
-
-        ${
-            novel.summary
-            ?
-            `
-            <div class="detail-summary">
-                ${escapeHTML(novel.summary)}
-            </div>
-            `
-            :
-            ""
-        }
-
-        ${
-            novel.link
-            ?
-            `
-            <button
-                class="primary-btn"
-                onclick="openStudyLink(${novel.id})"
-            >
-                📖 مطالعه رمان
-            </button>
-            `
-            :
-            `
-            <div class="empty">
-                لینک مطالعه هنوز اضافه نشده.
-            </div>
-            `
-        }
-
-    `;
-
-}
-
-
-/* =========================
-   لینک مطالعه
-========================= */
-
-function openStudyLink(id){
-
-    const novel =
-    novels.find(
-        item =>
-        String(item.id) === String(id)
-    );
-
-    if(!novel || !novel.link){
-
-        showToast(
-            "لینک مطالعه وجود ندارد."
-        );
-
-        return;
-    }
-
-    window.open(
-        novel.link,
-        "_blank"
-    );
-
-}
-
-
-/* =========================
-   ورود مدیریت
-========================= */
-
-function loginAdmin(){
-
-    const password =
-    document.getElementById(
-        "adminPassword"
-    ).value;
-
-    const error =
-    document.getElementById(
-        "loginError"
-    );
-
-    if(password === ADMIN_PASSWORD){
-
-        sessionStorage.setItem(
-            "venusAdmin",
-            "true"
-        );
-
-        error.style.display = "none";
-
-        showAdmin();
-
-    }else{
-
-        error.style.display = "block";
-
-    }
-
-}
-
-
-function adminLogout(){
-
-    sessionStorage.removeItem(
-        "venusAdmin"
-    );
-
-    showHome();
-
-}
-
-
-/* =========================
-   بررسی مدیریت
-========================= */
-
-function isAdmin(){
-
-    return (
-        sessionStorage.getItem(
-            "venusAdmin"
-        ) === "true"
-    );
-
-}
-
-
-/* =========================
-   انتخاب جلد
-========================= */
-
-function previewCover(event){
-
-    const file =
-    event.target.files[0];
-
-    const preview =
-    document.getElementById(
-        "coverPreview"
-    );
-
-    if(!file){
-
-        selectedCover = "";
-
-        preview.src = "";
-
-        preview.style.display = "none";
-
-        return;
-    }
-
-    const reader =
-    new FileReader();
-
-    reader.onload =
-    function(e){
-
-        selectedCover =
-        e.target.result;
-
-        preview.src =
-        selectedCover;
-
-        preview.style.display =
-        "block";
-
-    };
-
-    reader.readAsDataURL(file);
-
-}
-
-
-/* =========================
-   افزودن رمان
-========================= */
-
-async function addNovel(){
-
-    if(!isAdmin()){
-
-        showLogin();
-
-        return;
-    }
-
-    const title =
-    document.getElementById(
-        "titleInput"
-    ).value.trim();
-
-    const author =
-    document.getElementById(
-        "authorInput"
-    ).value.trim();
-
-    const genre =
-    document.getElementById(
-        "genreInput"
-    ).value.trim();
+function openLink(encoded){
 
     const link =
-    document.getElementById(
-        "linkInput"
-    ).value.trim();
+        decodeURIComponent(encoded);
 
-    const summary =
-    document.getElementById(
-        "summaryInput"
-    ).value.trim();
-
-    if(!title || !author){
-
-        showToast(
-            "نام رمان و نویسنده را وارد کن."
+    if(link){
+        window.open(
+            link,
+            "_blank"
         );
-
-        return;
     }
-
-    const button =
-    document.getElementById(
-        "addButton"
-    );
-
-    button.disabled = true;
-
-    button.textContent =
-    "در حال افزودن...";
-
-    try{
-
-        const result =
-        await supabaseClient
-        .from("novels")
-        .insert({
-
-            title:title,
-
-            author:author,
-
-            genre:genre || null,
-
-            summary:summary || null,
-
-            study_link:link,
-
-            cover_url:
-            selectedCover || null
-
-        })
-        .select()
-        .single();
-
-        const data = result.data;
-        const error = result.error;
-
-        if(error){
-
-            console.error(
-                "Insert Error:",
-                error
-            );
-
-            showToast(
-                "خطا در افزودن رمان."
-            );
-
-            return;
-        }
-
-        novels.unshift({
-
-            id:data.id,
-
-            title:data.title || "",
-
-            author:data.author || "",
-
-            genre:data.genre || "",
-
-            summary:data.summary || "",
-
-            link:data.study_link || "",
-
-            cover:data.cover_url || ""
-
-        });
-
-        clearNovelForm();
-
-        renderHomeNovels();
-
-        renderNovels();
-
-        renderAuthors();
-
-        renderAdminNovels();
-
-        showToast(
-            "رمان با موفقیت اضافه شد ✨"
-        );
-
-    }catch(error){
-
-        console.error(error);
-
-        showToast(
-            "اتصال به Supabase انجام نشد."
-        );
-
-    }finally{
-
-        button.disabled = false;
-
-        button.textContent =
-        "+ افزودن رمان";
-
-    }
-
 }
 
 
 /* =========================
-   پاک کردن فرم
+   TOAST
 ========================= */
-
-function clearNovelForm(){
-
-    document.getElementById(
-        "titleInput"
-    ).value = "";
-
-    document.getElementById(
-        "authorInput"
-    ).value = "";
-
-    document.getElementById(
-        "genreInput"
-    ).value = "";
-
-    document.getElementById(
-        "linkInput"
-    ).value = "";
-
-    document.getElementById(
-        "summaryInput"
-    ).value = "";
-
-    document.getElementById(
-        "coverInput"
-    ).value = "";
-
-    selectedCover = "";
-
-    const preview =
-    document.getElementById(
-        "coverPreview"
-    );
-
-    preview.src = "";
-
-    preview.style.display = "none";
-
-}
-
-
-/* =========================
-   لیست مدیریت
-========================= */
-
-function renderAdminNovels(){
-
-    const box =
-    document.getElementById(
-        "adminNovelList"
-    );
-
-    if(!box) return;
-
-    if(!novels.length){
-
-        box.innerHTML = `
-            <div class="empty">
-                هنوز رمانی اضافه نشده.
-            </div>
-        `;
-
-        return;
-    }
-
-    box.innerHTML =
-    novels.map(novel=>`
-
-        <div style="
-            display:flex;
-            align-items:center;
-            gap:12px;
-            padding:12px 0;
-            border-bottom:1px solid #292934;
-        ">
-
-            ${
-                novel.cover
-                ?
-                `
-                <img
-                    src="${novel.cover}"
-                    style="
-                        width:55px;
-                        height:75px;
-                        object-fit:cover;
-                        border-radius:10px;
-                    "
-                >
-                `
-                :
-                `
-                <div
-                    class="cover-placeholder"
-                    style="
-                        width:55px;
-                        height:75px;
-                        font-size:20px;
-                    "
-                >
-                    📖
-                </div>
-                `
-            }
-
-            <div style="
-                flex:1;
-                min-width:0;
-            ">
-
-                <div style="
-                    font-size:14px;
-                    font-weight:bold;
-                    margin-bottom:5px;
-                ">
-                    ${escapeHTML(novel.title)}
-                </div>
-
-                <div style="
-                    color:#85828e;
-                    font-size:11px;
-                ">
-                    ${escapeHTML(novel.author)}
-                </div>
-
-            </div>
-
-            <button
-                class="danger-btn"
-                onclick="deleteNovel(${novel.id})"
-            >
-                حذف
-            </button>
-
-        </div>
-
-    `).join("");
-
-}
-
-
-/* =========================
-   حذف رمان
-========================= */
-
-async function deleteNovel(id){
-
-    if(!isAdmin()){
-
-        showLogin();
-
-        return;
-    }
-
-    const novel =
-    novels.find(
-        item =>
-        String(item.id) === String(id)
-    );
-
-    if(!novel) return;
-
-    const confirmed =
-    confirm(
-        `رمان «${novel.title}» حذف شود؟`
-    );
-
-    if(!confirmed) return;
-
-    try{
-
-        const result =
-        await supabaseClient
-        .from("novels")
-        .delete()
-        .eq("id",id);
-
-        if(result.error){
-
-            console.error(
-                "Delete Error:",
-                result.error
-            );
-
-            showToast(
-                "خطا در حذف رمان."
-            );
-
-            return;
-        }
-
-        novels =
-        novels.filter(
-            item =>
-            String(item.id) !== String(id)
-        );
-
-        renderHomeNovels();
-
-        renderNovels();
-
-        renderAuthors();
-
-        renderAdminNovels();
-
-        showToast(
-            "رمان حذف شد."
-        );
-
-    }catch(error){
-
-        console.error(error);
-
-        showToast(
-            "اتصال به Supabase انجام نشد."
-        );
-
-    }
-
-}
-
-
-/* =========================
-   Toast
-========================= */
-
-let toastTimer;
 
 function showToast(message){
 
     const toast =
-    document.getElementById(
-        "toast"
-    );
+        document.getElementById("toast");
+
+    if(!toast) return;
 
     toast.textContent =
-    message;
+        message;
 
     toast.style.display =
-    "block";
+        "block";
 
     clearTimeout(
-        toastTimer
+        window.toastTimer
     );
 
-    toastTimer =
-    setTimeout(()=>{
-
-        toast.style.display =
-        "none";
-
-    },2500);
-
+    window.toastTimer =
+        setTimeout(()=>{
+            toast.style.display =
+                "none";
+        },3500);
 }
 
 
 /* =========================
-   امن کردن متن‌ها
+   SECURITY HELPER
 ========================= */
 
-function escapeHTML(value){
+function escapeHTML(text){
 
-    return String(value || "")
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
-
+    return String(text || "")
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
 }
 
 
 /* =========================
-   شروع
+   START
 ========================= */
 
 document.addEventListener(
     "DOMContentLoaded",
-    function(){
+    async function(){
 
-        loadNovelsFromSupabase();
+        showHome();
+
+        await loadNovelsFromSupabase();
 
     }
-);
+);</script>
 
-</script></body>
+</body>
 </html>
